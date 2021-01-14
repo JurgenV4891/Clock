@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+         <link href="Clock.css" rel="stylesheet">
+    </head>
+    <body>
+    <div id="msg"></div>
+        <div class="form">
+            <form action="#" method="get" accept-charset="utf-8">
+        <div class="clock">
+            
+        <span>XII</span>
+        <span>III</span>
+        <span>VI</span>
+        <span>IX</span>
+            <div class="hour">
+                <div class="hr" id="hr">
+                    
+                </div>
+            </div>
+            <div class="min">
+                <div class="mn" id="mn"></div>
+            </div> 
+            <div class="sec">
+                <div class="sc" id="sc"></div>
+            </div>
+        </div>
+            </form>
+        </div>
+        <script type="text/javascript">
+        const deg = 6;
+        const hr = document.querySelector('#hr');
+        const mn = document.querySelector('#mn');
+        const cs = document.querySelector('#sc');
+        
+        setInterval(() => {
+           let day = new Date();
+           let hh = day.getHours() * 30;
+           let mm = day.getMinutes() * deg;
+           let ss = day.getSeconds() * deg;
+            
+    hr.style.transform = `rotateZ(${(hh) + (mm/12)}deg)`;
+    mn.style.transform = `rotateZ(${mm}deg)`;
+     sc.style.transform = `rotateZ(${ss}deg)`;
+        })
+        
+        
+        
+        var d2 = new Date("January 01, 2022 00:00:00");
+
+
+var d4 = new Date();
+var d5 = Math.floor((d2-d4)/1000/60/60/24);
+var el = document.getElementById('msg');
+var hours = 23 - d4.getHours();
+var min = 60 - d4.getMinutes();
+
+el.innerHTML = 'Before New Year Day: <h2> ' + d5 + '</h2>' + ' jours ' + hours  + ' heures ' + min + ' minutes ';
+        
+        </script>
+        
+        <h6>Julien Viot</h6>
+    </body>
+</html>

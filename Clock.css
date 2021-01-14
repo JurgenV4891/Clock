@@ -1,0 +1,152 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:#ececec;
+    
+}
+#msg{
+    display:flex;
+    position:absolute;
+    top:20px;
+    color:gray;
+    font-family:cursive;
+}
+h2{
+    color:red;
+    line-height:15px;
+    padding-left:3px;
+    padding-right:3px;
+}
+span{
+    position:absolute;
+    color:#888;
+}
+span:nth-of-type(1){
+    margin-top:-75px;
+    transform:rotateX(30deg);
+}
+span:nth-of-type(2){
+    margin-left:64px;
+    transform:rotateY(75deg);
+    transform:rotateZ(-2deg);
+    transform:scale(0.8,1);
+}
+span:nth-of-type(3){
+    margin-top: 75px;
+    transform:rotateX(-30deg);
+}
+span:nth-of-type(4){
+    margin-left:-60px;
+    transform:rotateY(-40deg);
+}
+.clock{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:url();
+    background-size:cover;
+}
+
+
+.clock:before{
+    content:'';
+    position:absolute;
+    width:6px;
+    height:6px;
+    background:#777;
+    border:solid #c0c0c0 2px;
+    border-radius:50%;
+    z-index:10000;
+}
+.clock .hour,
+.clock .min,
+.clock .sec{
+    position:absolute;
+    
+}
+.clock .hour, .hr{
+  width:100px;
+  height:100px;
+}
+.clock .min, .mn{
+  width:100px;
+  height:100px;
+}
+.clock .sec, .sc{
+  width:120px;
+  height:120px;
+}
+.hr, .mn, .sc{
+    display:flex;
+    justify-content:center;
+   /*align-items:center;*/
+   position:absolute;
+   border-radius:50%;
+}
+.hr:before{
+    content:'';
+    position:absolute;
+    width:4px;
+    height:47px;
+    background:#ff105e;
+    z-index:10;
+    border-radius: 6px 6px 0 0;
+    box-shadow: 2px 2px 5px  #888;
+    color: red;
+}
+.mn:before{
+    content:'';
+    position:absolute;
+    width:2.5px;
+    height:55px;
+    background:#555;
+    z-index:11;
+    border-radius: 6px 6px 0 0;
+}
+
+.mn:before{
+    content:'';
+    position:absolute;
+    width:2px;
+    height:55px;
+    background:#333;
+    z-index:11;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 3px 2px 4px  #888;
+}
+.sc:before{
+    content:'';
+    position:absolute;
+    width:1px;
+    height:65px;
+    background:#333;
+    z-index:11;
+    border-radius: 6px 6px 0 0;
+    box-shadow: 3px 3px 3px  #888;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    height: 20rem;
+    width: 20rem;
+    border: 2px solid white;
+    background-color: #ccccff;
+    border-radius: 50%;
+    box-shadow: 25px 25px 30px rgba(4, 24, 34, 255);
+}
+h6{
+    position: absolute;
+    bottom: 20px;
+    background: #ececec;
+    font-family: 'Bad Script',cursive;
+}
